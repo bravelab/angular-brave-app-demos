@@ -52,7 +52,7 @@ angular.module('app.eCommerce', ['ui.router'])
                         }
                     }
                 }
-            }, 
+            },
             resolve: {
                 scripts: function(lazyScript){
                     return lazyScript.register([
@@ -678,7 +678,7 @@ angular.module('app.inbox', [
     'ngResource'
 ])
 .config(function ($stateProvider) {
-    
+
     $stateProvider
         .state('app.inbox', {
             url: '/inbox',
@@ -1248,20 +1248,20 @@ angular.module('app.calendar').directive('fullCalendar', function (CalendarEvent
 
                         // retrieve the dropped element's stored Event Object
                         var originalEventObject = $(this).data('eventObject');
-            
+
                         // we need to copy it, so that multiple events don't have a reference to the same object
                         var copiedEventObject = $.extend({}, originalEventObject);
-            
+
                         // assign it the date that was reported
                         copiedEventObject.start = date;
                         copiedEventObject.allDay = allDay;
 
                         // $log.log(scope);
-            
+
                         // render the event on the calendar
                         // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
                         $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-            
+
                         // is the "remove after drop" checkbox checked?
                         if ($('#drop-remove').is(':checked')) {
 
@@ -1274,7 +1274,7 @@ angular.module('app.calendar').directive('fullCalendar', function (CalendarEvent
                             $(this).remove();
 
                         }
-            
+
                     },
 
                     select: function (start, end, allDay) {
@@ -1375,7 +1375,7 @@ angular.module('app.forms').controller('FormLayoutsCtrl', function($scope, $moda
     $scope.openModal = function () {
         var modalInstance = $modal.open({
             templateUrl: 'app/forms/views/form-layout-modal.html',
-            controller: 'ModalDemoCtrl' 
+            controller: 'ModalDemoCtrl'
         });
 
         modalInstance.result.then(function () {
@@ -1468,7 +1468,7 @@ angular.module('app.forms').controller('FormXeditableCtrl', function($scope, $lo
     $scope.comments = 'awesome user!';
     $scope.state2 = 'California';
     $scope.fruits = 'peach<br/>apple';
-    
+
 
     $scope.fruits_data = [
         {value: 'banana', text: 'banana'},
@@ -1492,7 +1492,7 @@ angular.module('app.forms').controller('FormXeditableCtrl', function($scope, $lo
         {value: 'Operator', text: 'Operator'},
         {value: 'Support', text: 'Support'},
         {value: 'Admin', text: 'Admin'}
-    ]; 
+    ];
 
 });
 "use strict";
@@ -2958,7 +2958,7 @@ angular.module('app.ui').directive('smartJquiDialogLauncher', function () {
 
 angular.module('app.ui').directive('smartJquiDynamicTabs', function ($timeout) {
 
-	
+
 	function addDomEvents(element){
 
 		$('#tabs2').tabs();
