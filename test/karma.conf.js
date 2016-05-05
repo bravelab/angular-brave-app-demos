@@ -23,7 +23,6 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'bower_components/angular-ui-router/release/angular-ui-router.min.js',
-      'src/**/*.js',
       'test/**/*.spec.js'
     ],
 
@@ -48,7 +47,6 @@ module.exports = function(config) {
 
     // Which plugins to enable
     plugins: [
-      "karma-phantomjs-launcher",
       "karma-jasmine",
       'karma-coverage',
       'karma-coveralls'

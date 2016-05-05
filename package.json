@@ -1,7 +1,7 @@
 {
-  "name": "angular-brave-docs",
-  "description": "Generic docs module for SmartAdmin",
-  "main": "dist/angular-brave-docs.min.js",
+  "name": "angular-brave-app-demos",
+  "description": "Demo apps based on SmartAdmin",
+  "main": "dist/angular-brave-app-demos.min.js",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
@@ -12,30 +12,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/prestonvanloon/newrelic-angular.git"
+    "url": "https://bitbucket.org/sizeof/angular-brave-app-demos.git"
   },
   "devDependencies": {
-    "angular": "^1.4.3",
-    "angular-mocks": "^1.5.3",
-    "eslint-plugin-angular": "^1.0.0",
+    "bower": "latest",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
-    "gulp-eslint": "^2.0.0",
-    "gulp-uglify": "^1.2.0",
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.13.10",
-    "karma-coverage": "^1.0.0",
-    "karma-coveralls": "^1.1.2",
-    "karma-jasmine": "^0.3.6",
-    "karma-phantomjs-launcher": "^1.0.0",
-    "phantomjs": "^2.1.3",
-    "phantomjs-polyfill": "0.0.2",
-    "semantic-release": "^4.3.5"
+    "gulp-uglify": "^1.2.0"
   },
   "scripts": {
     "test": "gulp test",
     "dist": "gulp dist",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000",
@@ -46,5 +33,8 @@
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor test/protractor-conf.js",
     "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
+  },
+  "dependencies": {
+    "bower": "~1.7.9"
   }
 }

@@ -12,8 +12,8 @@ var config = {
     files: [
       'src/**/*.js'
     ],
-    concat: 'angular-brave-docs.js',
-    min: 'angular-brave-docs.min.js'
+    concat: 'angular-brave-app-demos.js',
+    min: 'angular-brave-app-demos.min.js'
   }
 };
 
@@ -32,7 +32,7 @@ function runTest(watch, done) {
 gulp.task('test', runTest.bind(null, false));
 gulp.task('test:watch', runTest.bind(null, true));
 
-gulp.task('dist', ['lint', 'test'], function () {
+gulp.task('dist', [], function () {
 
   var files = config.dist.files;
 
